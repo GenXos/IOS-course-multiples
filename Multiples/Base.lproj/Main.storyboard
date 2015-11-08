@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -22,14 +23,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="play" translatesAutoresizingMaskIntoConstraints="NO" id="m1A-KP-hCY">
-                                <rect key="frame" x="196" y="402" width="196" height="178"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="178" id="FKg-VA-V3m"/>
-                                    <constraint firstAttribute="width" constant="196" id="cNa-Yd-G8f"/>
-                                </constraints>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MULTIPLES" translatesAutoresizingMaskIntoConstraints="NO" id="76U-v6-SSQ">
                                 <rect key="frame" x="138" y="28" width="324" height="65"/>
                                 <animations/>
@@ -38,7 +31,7 @@
                                     <constraint firstAttribute="width" constant="324" id="U5F-IG-ZLu"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="daL-q5-zdm">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mutiple to add by" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="daL-q5-zdm">
                                 <rect key="frame" x="169" y="340" width="250" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -48,25 +41,63 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0 + 0 = 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUr-i2-jxR">
+                                <rect key="frame" x="131" y="185" width="339" height="45"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfQ-CK-fhH">
+                                <rect key="frame" x="162" y="304" width="265" height="101"/>
+                                <animations/>
+                                <state key="normal" image="add"/>
+                                <connections>
+                                    <action selector="addMultiples:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BkQ-zx-LVU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIP-Bf-GR7">
+                                <rect key="frame" x="204" y="407" width="193" height="173"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="173" id="NkS-tm-Dfu"/>
+                                    <constraint firstAttribute="width" constant="193" id="Wre-Qz-PWa"/>
+                                    <constraint firstAttribute="width" secondItem="fIP-Bf-GR7" secondAttribute="height" multiplier="193:173" id="ziv-2J-JM8"/>
+                                </constraints>
+                                <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="playMultiples:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hHS-Xt-zB2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="76U-v6-SSQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2oT-N4-aqP"/>
-                            <constraint firstItem="m1A-KP-hCY" firstAttribute="top" secondItem="daL-q5-zdm" secondAttribute="bottom" constant="32" id="57i-BI-vis"/>
                             <constraint firstItem="mzt-r2-Adb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6C0-Lb-Q8f"/>
                             <constraint firstItem="mzt-r2-Adb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="6IR-MJ-qra"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mzt-r2-Adb" secondAttribute="bottom" id="99h-co-pNp"/>
+                            <constraint firstItem="fIP-Bf-GR7" firstAttribute="top" secondItem="daL-q5-zdm" secondAttribute="bottom" constant="37" id="9JJ-Fa-QiQ"/>
                             <constraint firstItem="daL-q5-zdm" firstAttribute="centerX" secondItem="mzt-r2-Adb" secondAttribute="centerX" id="Bof-4Y-O14"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="m1A-KP-hCY" secondAttribute="bottom" constant="20" id="a18-ed-VB3"/>
+                            <constraint firstItem="RfQ-CK-fhH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GaV-c0-ZPP"/>
+                            <constraint firstItem="JUr-i2-jxR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LJZ-fF-ejF"/>
+                            <constraint firstItem="RfQ-CK-fhH" firstAttribute="top" secondItem="mzt-r2-Adb" secondAttribute="bottom" constant="-296" id="LUr-HS-UIw"/>
+                            <constraint firstItem="fIP-Bf-GR7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S0z-cO-WG2"/>
                             <constraint firstItem="mzt-r2-Adb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="b4r-Fi-ZpH"/>
                             <constraint firstItem="76U-v6-SSQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="bhO-Px-JoF"/>
+                            <constraint firstItem="JUr-i2-jxR" firstAttribute="top" secondItem="76U-v6-SSQ" secondAttribute="bottom" constant="92" id="knv-jp-RJI"/>
                             <constraint firstItem="daL-q5-zdm" firstAttribute="top" secondItem="76U-v6-SSQ" secondAttribute="bottom" constant="247" id="oSC-wE-jme"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="m1A-KP-hCY" secondAttribute="bottom" constant="20" id="v3x-lH-eD3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fIP-Bf-GR7" secondAttribute="bottom" constant="20" id="pk6-Sl-pT8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mzt-r2-Adb" secondAttribute="trailing" constant="-20" id="voR-i4-XHl"/>
-                            <constraint firstItem="m1A-KP-hCY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xtW-gs-F26"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="RfQ-CK-fhH" id="SHX-y6-4ng"/>
+                        <outlet property="multipleLbl" destination="JUr-i2-jxR" id="8Mp-RS-8ry"/>
+                        <outlet property="multiplesTxt" destination="daL-q5-zdm" id="9go-MG-2cH"/>
+                        <outlet property="mutilplesImg" destination="76U-v6-SSQ" id="GJC-u5-QxQ"/>
+                        <outlet property="playButton" destination="fIP-Bf-GR7" id="tWF-N2-l73"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -75,6 +106,7 @@
     </scenes>
     <resources>
         <image name="MULTIPLES" width="533" height="124"/>
+        <image name="add" width="211" height="101"/>
         <image name="chalkboard" width="801" height="750"/>
         <image name="play" width="272" height="268"/>
     </resources>

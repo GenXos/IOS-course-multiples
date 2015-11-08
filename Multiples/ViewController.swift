@@ -10,6 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  @IBOutlet weak var mutilplesImg: UIImageView!
+  @IBOutlet weak var multiplesTxt: UITextField!
+  @IBOutlet weak var multipleLbl: UILabel!
+  @IBOutlet weak var addButton: UIButton!
+  @IBOutlet weak var playButton: UIButton!
+
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +27,11 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
+  @IBAction func addMultiples(sender: AnyObject) {
+  }
+
+  @IBAction func playMultiples(sender: AnyObject) {
+  }
 
 }
 
