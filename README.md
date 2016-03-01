@@ -1,2 +1,2 @@
-# IOS-course-multiples
+# multiples
 Shows multiples of a provided number
